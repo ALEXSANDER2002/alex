@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  folhabolsista-front:
+    image: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${IMAGE_TAG}
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == worker
+      resources:
+         limits:
+          cpus: '0.4'
+          memory: 512M
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.`${ROUTE}`.entrypoints=websecure
+        - traefik.http.routers.`${ROUTE}`.tls=true
+        - traefik.http.routers.`${ROUTE}`.rule=Host(`${APPHOST}`
+    environment:
+      - PROTOCOL=https
+      - APPHOST=${APPHOST}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - JWT_SECRET={JWT_SECRET}
+      - PORT=3000
+    networks:
+      - public
+    logging:
+       driver: "gelf"
+       options:
+            gelf-address: ${GRAYLOG_HOST}
+            tag: ${GRAYLOG_TAG}
+networks:
+  public:
+    external: true
