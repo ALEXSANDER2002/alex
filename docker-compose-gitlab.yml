@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  validacao-diploma:
+    image: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${IMAGE_TAG}
+    container_name: validacao-diploma
+    restart: always
+    environment:
+      - PROTOCOL=https
+      - APPHOST=${APPHOST}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - JWT_SECRET={JWT_SECRET}
+      - PORT=3000
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.`${ROUTE}`.entrypoints=websecure
+      - traefik.http.routers.`${ROUTE}`.tls=true
+      - traefik.http.routers.`${ROUTE}`.rule=Host(`${APPHOST}`)

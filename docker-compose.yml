@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  validacao-diploma:
+    container_name: validacao-diploma
+    # env_file: .env.dist
+    build:
+      context: ./
+      target: dependencies
+    environment:
+      - REACT_APP_API_URL=https://diplomas-hml.somosb4.com.br/api
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+      # - ./.env.local:/app/.env.local
+    command: yarn dev
+    ports:
+      - "3000:3000"
