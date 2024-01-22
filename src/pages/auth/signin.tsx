@@ -8,7 +8,7 @@ import { getProviders, signIn } from "next-auth/react";
 // import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Head from "next/head";
 import Link from "next/link";
-import { MeuComponente2 } from "./script";
+
 
 export default function Login() {
   // {
@@ -20,7 +20,7 @@ export default function Login() {
         <title>Entrar</title>
       </Head>
       <main className="container">
-        <div id="divinfo5" className="text-center text-text alec2   ">
+        <div id="divinfo5" className="text-center text-text alec  ">
           Bem-vindo ao <strong>Validador de documentos</strong> emitidos pela
           UNIFESSPA. Este serviço propõe-se a confirmar a validade dos
           documentos acadêmicos emitidos. Para validar um documento, informe
@@ -35,10 +35,10 @@ export default function Login() {
               </div>
               <form action="../diploma" method="post">
                 <div id="divinfo10" className="card-body text-center alex87 ">
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div id="divinfo9" className="form-group ">
-                        <label htmlFor="codigo">Código de Verificação:</label>
+                  <div  className="row">
+                    <div  className="col-md-12">
+                      <div  className="form-group ">
+                        <label id="divinfo9" htmlFor="codigo">Código de Verificação:</label>
                         <input
                           type="text"
                           className="form-control"
@@ -56,6 +56,7 @@ export default function Login() {
                 >
                   <button
                     type="submit"
+                    id="divinfo37"
                     className="butao2"
                     value="redirecionar"
                     style={{ textDecoration: "none" }}

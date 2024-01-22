@@ -26,12 +26,14 @@ export default function Header() {
       name: "Página inicial",
       url: "/",
       idx: "divinfo24",
+      idp: "divinfo44"
     },
     {
       icon: "headset",
       name: "Abrir um chamado",
       url: "https://dashboard.unifesspa.edu.br/",
       idx: "divinfo25",
+      idp: "divinfo45"
     },
   ];
 
@@ -101,6 +103,9 @@ export default function Header() {
     MeuComponente();
     setHasContrasteClass((prevHasContrasteClass) => !prevHasContrasteClass);
   };
+  const MeuComponente = () => {
+    const [ativo, setAtivo] = useState(false);
+  }
 
   useEffect(() => {
     document.body.classList.toggle("contraste3", hasContrasteClass);
@@ -143,6 +148,12 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (document.body.style.backgroundColor.match('black')) {
+      MeuComponente(); 
+    }
+  }, []);
+
   return (
     <header
       id="divinfo3"
@@ -173,11 +184,11 @@ export default function Header() {
                 <i className="fas fa-ellipsis-v" aria-hidden="true"></i>
               </button>
               <div id="divinfo12" className="br-list">
-                <div className="header">
-                  <div className="title">Acesso Rápido</div>
+                <div  className="header">
+                  <div  className="title">Acesso Rápido</div>
                 </div>
 
-                {links.map((item, index, idx) => (
+                {links.map((item, index) => (
                   <a
                     key={index}
                     id={item.idx}
@@ -197,6 +208,7 @@ export default function Header() {
               }`}
             >
               <button
+                
                 className={`br-button circle small ${
                   isIconActive ? "active" : ""
                 }`}
@@ -206,28 +218,29 @@ export default function Header() {
                 aria-label="Abrir Funcionalidades do Sistema"
                 onClick={() => setIconActive(!isIconActive)}
               >
-                <i className="fas fa-th" aria-hidden="true"></i>
+                <i   className="fas fa-th" aria-hidden="true"></i>
               </button>
               <div className="br-list">
                 <div className="header">
                   <div className="title">Funcionalidades do Sistema</div>
                 </div>
 
-                {icons.map((item, index, idx) => (
+                {icons.map((item, index) => (
                   <Link
                     href={item.url}
                     key={index}
                     id={item.idx}
-                    className="br-item design-clean"
+                    className="design-clean "
                   >
                     <Button
-                      id="divinfo13"
-                      className="circle"
+                      id={item.idp}
+                      className="circle "
                       aria-label={item.name}
                       icon={item.icon}
                       label={item.name}
                       labelClassName="text"
                     />
+                  
                   </Link>
                 ))}
               </div>
@@ -236,13 +249,15 @@ export default function Header() {
               <div className="header-sign-in">
                 {/* Adicionei os botões de acessibilidade */}
                 <button
+                  
                   className="accessibility-btn"
                   onClick={toggleContrast}
                   aria-label="Alternar Contraste"
                 >
-                  <i class="fa-solid fa-circle-half-stroke"></i>
+                  <i id= "divinfo36" class ="fa-solid fa-circle-half-stroke"></i>
                 </button>
                 <button
+                  id="divinfo35"
                   className="accessibility-btn"
                   onClick={() => changeFontSize("increase")}
                   aria-label="Aumentar Fonte"
@@ -250,6 +265,7 @@ export default function Header() {
                   A+
                 </button>
                 <button
+                  id="divinfo34"
                   className="accessibility-btn"
                   onClick={() => changeFontSize("decrease")}
                   aria-label="Diminuir Fonte"

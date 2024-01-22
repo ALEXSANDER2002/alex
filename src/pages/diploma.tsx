@@ -43,8 +43,8 @@ export default function Diploma() {
       <main className="container">
         <div className="row justify-content-center mt-4">
           <div className="col-12 col-md-8 col-lg-6">
-            <div className="alec text-center">
-              <p className="text-up-04 text-semi-bold my-3">
+            <div id="divinfo40" className="alec text-center">
+              <p id="divinfo41" className="text-up-04 text-semi-bold my-3">
                 Documento válido e emitido pela UNIFESSPA!
               </p>
             </div>
@@ -55,12 +55,13 @@ export default function Diploma() {
                 <div className="card-footer d-flex align-items-center justify-content-center">
                   <a
                     href="#"
+                    id="divinfo39" 
                     className="butao3"
                     style={{ textDecoration: "none" }}
                     onClick={handleAPI}
                   >
                     <i className="fas fa-1x fa-magnifying-glass" /> Visualizar
-                    Documento1
+                    Documento
                     {/* <button className="butao3"></button> */}
                   </a>
                 </div>

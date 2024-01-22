@@ -8,7 +8,7 @@ export default function Breadcrumb() {
 
   const titleMap: { [key: string]: string } = {
     error: "Erro",
-    signin: "Entrar",
+    signin: "",
     profile: "Perfil",
     relatorio: "Relatório",
     "[id]": "Resultado",
@@ -25,7 +25,7 @@ export default function Breadcrumb() {
         <li className="crumb home">
           <Link className="br-button circle" href="/">
             <span className="sr-only">Página Inicial</span>
-            <i className="fas fa-home"></i>
+            <i id="divinfo42"  className="fas fa-home"></i>
           </Link>
         </li>
         {routes.map((route, index) =>

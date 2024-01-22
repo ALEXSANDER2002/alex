@@ -58,10 +58,10 @@ export function MeuComponente() {
   }
   const divinfo9 = document.getElementById("divinfo9");
   if (divinfo9) {
-    if (divinfo9.classList.contains("contraste3")) {
-      divinfo9.classList.toggle("contraste3");
+    if (divinfo9.classList.contains("contraste10")) {
+      divinfo9.classList.toggle("contraste10");
     } else {
-      divinfo9.classList.add("contraste3");
+      divinfo9.classList.add("contraste10");
     }
   }
   const divinfo10 = document.getElementById("divinfo10");
@@ -81,7 +81,7 @@ export function MeuComponente() {
     }
   }
   const divinfo12 = document.getElementById("divinfo12");
-  if (divinfo11) {
+  if (divinfo12) {
     if (divinfo12.classList.contains("contraste4")) {
       divinfo12.classList.toggle("contraste4");
     } else {
@@ -90,18 +90,18 @@ export function MeuComponente() {
   }
   const divinfo13 = document.getElementById("divinfo13");
   if (divinfo13) {
-    if (divinfo13.classList.contains("contraste4")) {
-      divinfo13.classList.toggle("contraste4");
+    if (divinfo13.classList.contains("contraste1")) {
+      divinfo13.classList.toggle("contraste1");
     } else {
-      divinfo13.classList.add("contraste4");
+      divinfo13.classList.add("contraste1");
     }
   }
   const divinfo14 = document.getElementById("divinfo14");
   if (divinfo14) {
-    if (divinfo14.classList.contains("contraste7")) {
-      divinfo14.classList.toggle("contraste7");
+    if (divinfo14.classList.contains("contraste1")) {
+      divinfo14.classList.toggle("contraste1");
     } else {
-      divinfo14.classList.add("contraste7");
+      divinfo14.classList.add("contraste1");
     }
   }
   const divinfo15 = document.getElementById("divinfo15");
@@ -146,26 +146,107 @@ export function MeuComponente() {
   }
   const divinfo23 = document.getElementById("divinfo23");
   if (divinfo23) {
-    if (divinfo23.classList.contains("contraste7")) {
-      divinfo23.classList.toggle("contraste7");
+    if (divinfo23.classList.contains("contraste1")) {
+      divinfo23.classList.toggle("contraste1");
     } else {
-      divinfo23.classList.add("contraste7");
+      divinfo23.classList.add("contraste1");
     }
   }
   const divinfo24 = document.getElementById("divinfo24");
   if (divinfo24) {
-    if (divinfo24.classList.contains("contraste7")) {
-      divinfo24.classList.toggle("contraste7");
+    if (divinfo24.classList.contains("contraste1")) {
+      divinfo24.classList.toggle("contraste1");
     } else {
-      divinfo24.classList.add("contraste7");
+      divinfo24.classList.add("contraste1");
     }
   }
   const divinfo25 = document.getElementById("divinfo25");
   if (divinfo24) {
-    if (divinfo25.classList.contains("contraste7")) {
-      divinfo25.classList.toggle("contraste7");
+    if (divinfo25.classList.contains("contraste1")) {
+      divinfo25.classList.toggle("contraste1");
     } else {
-      divinfo25.classList.add("contraste7");
+      divinfo25.classList.add("contraste1");
     }
   }
+  const divinfo34 = document.getElementById("divinfo34");
+  if (divinfo34) {
+    if (divinfo34.classList.contains("contraste1")) {
+      divinfo34.classList.toggle("contraste1");
+    } else {
+      divinfo34.classList.add("contraste1");
+    }
+  }
+  const divinfo35 = document.getElementById("divinfo35");
+  if (divinfo35) {
+    if (divinfo35.classList.contains("contraste1")) {
+      divinfo35.classList.toggle("contraste1");
+    } else {
+      divinfo35.classList.add("contraste1");
+    }
+  }
+  const divinfo36 = document.getElementById("divinfo36");
+  if (divinfo36) {
+    if (divinfo36.classList.contains("contraste1")) {
+      divinfo36.classList.toggle("contraste1");
+    } else {
+      divinfo36.classList.add("contraste1");
+    }
+  }
+  const divinfo37 = document.getElementById("divinfo37");
+  if (divinfo37) {
+    if (divinfo37.classList.contains("contraste0")) {
+      divinfo37.classList.toggle("contraste0");
+    } else {
+      divinfo37.classList.add("contraste0");
+    }
+  }
+  const divinfo39 = document.getElementById("divinfo39");
+  if (divinfo39) {
+    if (divinfo39.classList.contains("contraste0")) {
+      divinfo39.classList.toggle("contraste0");
+    } else {
+      divinfo39.classList.add("contraste0");
+    }
+  }
+  const divinfo40 = document.getElementById("divinfo40");
+  if (divinfo40) {
+    if (divinfo40.classList.contains("contraste0")) {
+      divinfo40.classList.toggle("contraste0");
+    } else {
+      divinfo40.classList.add("contraste0");
+    }
+  }
+  const divinfo41 = document.getElementById("divinfo41");
+  if (divinfo41) {
+    if (divinfo41.classList.contains("contraste11")) {
+      divinfo41.classList.toggle("contraste11");
+    } else {
+      divinfo41.classList.add("contraste11");
+    }
+  }
+  const divinfo42 = document.getElementById("divinfo42");
+  if (divinfo42) {
+    if (divinfo42.classList.contains("contraste11")) {
+      divinfo42.classList.toggle("contraste11");
+    } else {
+      divinfo42.classList.add("contraste11");
+    }
+  }
+  const divinfo44 = document.getElementById("divinfo44");
+  if (divinfo44) {
+    if (divinfo44.classList.contains("contraste1")) {
+      divinfo44.classList.toggle("contraste1");
+    } else {
+      divinfo44.classList.add("contraste1");
+    }
+  }
+  const divinfo45 = document.getElementById("divinfo45");
+  if (divinfo45) {
+    if (divinfo45.classList.contains("contraste1")) {
+      divinfo45.classList.toggle("contraste1");
+    } else {
+      divinfo45.classList.add("contraste1");
+    }
+  }
+
 }
